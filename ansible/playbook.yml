@@ -1,0 +1,20 @@
+
+- hosts: all
+  user: vagrant
+  become: yes
+  vars:
+    user_pass: $6$S3vHupp4yX$UY6JioP32ohywV1QgYrZR2GSOm5FtsgZi5Bqo9aTA0dP6Z4l8C4BYxRJkoqxrEBMDyD4EayM2uhcWDjIR9SO4.
+
+  tasks:
+    - include: tasks/tools.yml
+    - include: tasks/desktop-settings.yml
+    - include: tasks/vcs.yml
+    - include: tasks/system.yml
+    - include: tasks/development.yml
+
+  roles: []
+    - { role: neitosoft.users, user_name: neito, hashed_password: "{{user_pass}}" }
+    - { role: neitosoft.google-chrome, chrome_disable_gpu: true }
+    - { role: neitosoft.java }
+    - { role: neitosoft.intellij }
+    - { role: neitosoft.docker, docker_users: [neito] }

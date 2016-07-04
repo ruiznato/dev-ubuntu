@@ -1,0 +1,5 @@
+---
+- src: neitosoft.google-chrome
+- src: neitosoft.java
+- src: neitosoft.intellij
+- src: neitosoft.docker

@@ -1,0 +1,17 @@
+---
+- name: configure user neito
+  become: true
+  become_user: neito
+  shell: "{{item}}"
+  with_items:
+    - dbus-launch gsettings set org.mate.Marco.general theme 'BlueMenta'
+    - dbus-launch gsettings set org.mate.interface gtk-theme 'BlueMenta'
+    - dbus-launch gsettings set org.mate.caja.desktop font 'Ubuntu 10'
+    - dbus-launch gsettings set org.mate.interface monospace-font-name 'Ubuntu Mono 10'
+    - dbus-launch gsettings set org.mate.font-rendering antialiasing 'rgba'
+    - dbus-launch gsettings set org.mate.font-rendering antialiasing 'rgba'
+    - dbus-launch gsettings set org.mate.font-rendering antialiasing 'rgba'
+    - dbus-launch gsettings set org.mate.font-rendering dpi 96.0
+    - dbus-launch gsettings set org.mate.font-rendering hinting 'full'
+    - dbus-launch gsettings set org.mate.font-rendering hinting 'none'
+    - dbus-launch gsettings set org.mate.font-rendering hinting 'full'
