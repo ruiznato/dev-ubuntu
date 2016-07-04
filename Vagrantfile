@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
-    vb.name = "ubuntu-gui"
+    vb.name = "dev-ubuntu"
 
     vb.memory = "3072"
     vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
