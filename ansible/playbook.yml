@@ -13,7 +13,7 @@
     - include: tasks/development.yml
 
   roles: 
-    - { role: neitosoft.users, user_name: neito, hashed_password: "{{user_pass}}" }
+    - { role: neitosoft.users, user_name: neito, hashed_password: "{{user_pass}}", user_sudo: yes }
     - { role: neitosoft.google-chrome, chrome_disable_gpu: true }
     - { role: neitosoft.java }
     - { role: neitosoft.intellij }
