@@ -2,14 +2,16 @@
 
 # Install pre-requisites
 sudo apt-get update -qq
-sudo apt-get install -y software-properties-common apt-transport-https
-sudo apt-get install -y ansible
-sudo apt-get install -y pip
-sudo pip install requests[security]
+
+apt-get install -y software-properties-common git apt-transport-https
+apt-add-repository -y ppa:ansible/ansible
+apt-get update
+apt-get install -y ansible
 
 # Setup Ansible
-sudo ansible-galaxy install -r ansible/requirements.yml
-sudo bash -c 'printf "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts'
+ansible-galaxy install -r ansible/requirements.yml
+bash -c 'printf "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts'
 
 # Provisioning
-sudo ansible-playbook ansible/playbook.yml --connection=local
+ansible-playbook ansible/playbook.yml --syntax-check
+ansible-playbook ansible/playbook.yml --connection=local

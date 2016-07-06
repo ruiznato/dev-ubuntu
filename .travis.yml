@@ -4,27 +4,12 @@ python: "2.7"
 sudo: yes
 dist: trusty
 
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y software-properties-common apt-transport-https
-
 install:
-  - sudo pip install ansible
-  - sudo pip install requests[security]
-
-  # install requirements
-  - sudo ansible-galaxy install -r ansible/requirements.yml
-
-  # setup ansible hosts
-  - sudo bash -c 'printf "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts'
+  # test and execute playbook
+  - sudo ./ansible/local.sh
 
 
 script:
-
-  # test and execute playbook
-  - sudo ansible-playbook ansible/playbook.yml --syntax-check
-  - sudo ansible-playbook ansible/playbook.yml --connection=local
-
   # validate everything installed
   - which idea
   - which soapui
