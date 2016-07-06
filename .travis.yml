@@ -1,0 +1,35 @@
+---
+language: python
+python: "2.7"
+sudo: yes
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  - sudo pip install ansible
+
+script:
+  # install requirements
+  - ansible-galaxy install -r ansible/requirements.yml
+
+  # test and execute playbook
+  - ansible-playbook -i ansible/playbook.yml --syntax-check
+  - ansible-playbook -i ansible/playbook.yml --connection=local --sudo
+
+  # validate everything installed
+  - which idea
+  - which soapui
+  - which meld
+  - which gnome-system-monitor
+  - which guake
+
+  # check versions
+  - java -version
+  - docker --version
+  - google-chrome --version
+  - git --version
+
+  # check user is created
+  - getent passwd neito
+  - grep -Po "^sudo.+:\K.*$" /etc/group | grep neito

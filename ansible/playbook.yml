@@ -13,8 +13,9 @@
     - include: tasks/development.yml
 
   roles: 
-    - { role: neitosoft.users, user_name: neito, hashed_password: "{{user_pass}}", user_sudo: yes }
-    - { role: neitosoft.google-chrome, chrome_disable_gpu: true }
-    - { role: neitosoft.java }
-    - { role: neitosoft.intellij }
-    - { role: neitosoft.docker, docker_users: [neito] }
+    - { role: ruiznato.users, user_name: neito, hashed_password: "{{user_pass}}", user_sudo: yes }
+    - { role: ruiznato.google-chrome, chrome_disable_gpu: true }
+    - { role: ruiznato.java }
+    - { role: ruiznato.intellij }
+    - { role: ruiznato.docker, docker_users: [neito] }
+    - { name: ruiznato.soapui }

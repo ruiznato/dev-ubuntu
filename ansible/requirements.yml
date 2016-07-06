@@ -1,6 +1,7 @@
 ---
-- src: neitosoft.google-chrome
-- src: neitosoft.java
-- src: neitosoft.intellij
-- src: neitosoft.docker
-- src: neitosoft.users
+- src: ruiznato.google-chrome
+- src: ruiznato.java
+- src: ruiznato.intellij
+- src: ruiznato.docker
+- src: ruiznato.users
+- src: ruiznato.soapui
