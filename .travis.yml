@@ -9,9 +9,14 @@ before_install:
 install:
   - sudo pip install ansible
 
-script:
   # install requirements
   - sudo ansible-galaxy install -r ansible/requirements.yml
+
+  # setup ansible hosts
+  - sudo bash -c 'printf "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts'
+
+
+script:
 
   # test and execute playbook
   - sudo ansible-playbook ansible/playbook.yml --syntax-check
