@@ -4,6 +4,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "neito/xenial64-mate"
 
+  config.vm.synced_folder "shared/", "/shared"
+
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.name = "dev-ubuntu"
