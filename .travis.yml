@@ -6,7 +6,7 @@ dist: trusty
 
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install apt-transport-https
+  - sudo apt-get install -y software-properties-common apt-transport-https
 
 install:
   - sudo pip install ansible
