@@ -6,7 +6,7 @@ Provisioned by Ansible
 
 ## Description
 
-Ansible Provisioning to setup a Development Environment in Ubuntu 16.10
+Ansible Provisioning to setup a Development Environment on Ubuntu 16.10
 
 ## Vagrant
 
