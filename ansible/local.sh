@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install pre-requisites
-sudo apt-get update -qq
+apt-get update -qq
 
 apt-get install -y software-properties-common git apt-transport-https
 apt-add-repository -y ppa:ansible/ansible
