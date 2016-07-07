@@ -21,4 +21,4 @@ bash -c 'printf "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hos
 
 # Provisioning
 ansible-playbook ansible/playbook.yml --syntax-check
-ansible-playbook ansible/playbook.yml --connection=local
+ansible-playbook ansible/playbook.yml --connection=local "$@"

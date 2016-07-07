@@ -6,7 +6,7 @@ dist: trusty
 
 script:
   # test and execute playbook
-  - sudo bash ./ansible/local.sh
+  - sudo bash ./ansible/local.sh --skip-tags "gui"
 
   # validate everything installed
   - which idea

@@ -15,3 +15,5 @@
     - dbus-launch gsettings set org.mate.font-rendering hinting 'full'
     - dbus-launch gsettings set org.mate.font-rendering hinting 'none'
     - dbus-launch gsettings set org.mate.font-rendering hinting 'full'
+  tags:
+    - gui
