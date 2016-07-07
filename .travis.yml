@@ -6,7 +6,7 @@ dist: trusty
 
 script:
   # test and execute playbook
-  - sudo ./ansible/local.sh
+  - bash ./ansible/local.sh
 
   # validate everything installed
   - which idea
