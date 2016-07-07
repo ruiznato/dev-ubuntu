@@ -4,12 +4,10 @@ python: "2.7"
 sudo: yes
 dist: trusty
 
-install:
+script:
   # test and execute playbook
   - sudo ./ansible/local.sh
 
-
-script:
   # validate everything installed
   - which idea
   - which soapui
