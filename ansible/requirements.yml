@@ -1,8 +1,8 @@
 ---
-- src: ruiznato.google-chrome
-- src: ruiznato.java
-- src: ruiznato.intellij
-- src: ruiznato.docker
-- src: ruiznato.users
-- src: ruiznato.soapui
-- src: ruiznato.nodejs
+- src: nsops.google-chrome
+- src: nsops.java
+- src: nsops.intellij
+- src: nsops.docker
+- src: nsops.users
+- src: nsops.soapui
+- src: nsops.nodejs

@@ -13,12 +13,12 @@
     - include: tasks/development.yml
 
   roles:
-    - { role: ruiznato.users, user_name: neito, hashed_password: "{{user_pass}}", user_sudo: yes }
-    - { role: ruiznato.google-chrome, chrome_disable_gpu: true }
-    - { role: ruiznato.java }
-    - { role: ruiznato.intellij }
-    - { role: ruiznato.docker, docker_users: [neito] }
-    - { name: ruiznato.soapui }
+    - { role: nsops.users, user_name: neito, hashed_password: "{{user_pass}}", user_sudo: yes }
+    - { role: nsops.google-chrome, chrome_disable_gpu: true }
+    - { role: nsops.java }
+    - { role: nsops.intellij }
+    - { role: nsops.docker, docker_users: [neito] }
+    - { name: nsops.soapui }
 
     # development
-    - { role: ruiznato.nodejs, nodejs_version: "6.x" }
+    - { role: nsops.nodejs, nodejs_version: "6.x" }
